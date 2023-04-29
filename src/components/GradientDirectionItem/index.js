@@ -1,6 +1,7 @@
 import {Li, LiButton} from './styledComponents'
 
 const GradientDirectionItem = props => {
+  console.log(props)
   const {each, changeDirection, active} = props
   const {displayText, value} = each
 
@@ -9,10 +10,8 @@ const GradientDirectionItem = props => {
   }
 
   return (
-    <Li data-testid="gradientGenerator" onClick={buttonChange}>
-      <LiButton data-testid="gradientGenerator" active={active}>
-        {displayText}
-      </LiButton>
+    <Li onClick={buttonChange}>
+      <LiButton active={active}>{displayText}</LiButton>
     </Li>
   )
 }
