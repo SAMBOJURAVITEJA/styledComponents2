@@ -57,12 +57,8 @@ class GradientGenerator extends Component {
         data-testid="gradientGenerator"
       >
         <ContentContainer data-testid="gradientGenerator">
-          <CustomHeading data-testid="gradientGenerator">
-            Generate a CSS Color Gradient
-          </CustomHeading>
-          <CustomParagraph data-testid="gradientGenerator">
-            Choose Direction
-          </CustomParagraph>
+          <CustomHeading>Generate a CSS Color Gradient</CustomHeading>
+          <CustomParagraph>Choose Direction</CustomParagraph>
           <UnOrderedList data-testid="gradientGenerator">
             {gradientDirectionsList.map(each => (
               <GradientDirectionItem
@@ -73,16 +69,11 @@ class GradientGenerator extends Component {
               />
             ))}
           </UnOrderedList>
-          <CustomParagraph data-testid="gradientGenerator">
-            Pick the Colors
-          </CustomParagraph>
+          <CustomParagraph>Pick the Colors</CustomParagraph>
           <DivContainer data-testid="gradientGenerator">
             <InputContainer data-testid="gradientGenerator">
-              <CustomParagraph data-testid="gradientGenerator">
-                {fromColor}
-              </CustomParagraph>
+              <CustomParagraph>{fromColor}</CustomParagraph>
               <CustomInput
-                data-testid="gradientGenerator"
                 onChange={this.fromChange}
                 value={fromColor}
                 type="color"
@@ -92,18 +83,15 @@ class GradientGenerator extends Component {
               data-testid="gradientGenerator"
               onChange={this.toChange}
             >
-              <CustomParagraph data-testid="gradientGenerator">
-                {toColor}
-              </CustomParagraph>
+              <CustomParagraph>{toColor}</CustomParagraph>
               <CustomInput
-                data-testid="gradientGenerator"
                 onChange={this.toChange}
                 value={toColor}
                 type="color"
               />
             </InputContainer>
           </DivContainer>
-          <CustomButtonContainer data-testid="gradientGenerator">
+          <CustomButtonContainer>
             <CustomButton type="button" onClick={this.generate}>
               Generate
             </CustomButton>
